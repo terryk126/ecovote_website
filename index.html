@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoVote — Resource Smart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="stage" id="stage">
+        <img
+          src="assets/Desktop2.png"
+          alt="EcoVote voting interface"
+          class="stage__art"
+          width="1920"
+          height="1080"
+          draggable="false"
+        />
+
+        <div class="stage__ui" aria-hidden="false">
+          <output class="score score--pizza" id="score-pizza">0</output>
+          <output class="score score--icecream" id="score-icecream">0</output>
+
+          <button type="button" class="btn-reset" id="btn-reset">
+            <span class="visually-hidden">Reset votes</span>
+          </button>
+
+          <div
+            class="drop-zone hole hole--pizza"
+            id="hole-pizza"
+            data-vote="pizza"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="drop-zone hole hole--icecream"
+            id="hole-icecream"
+            data-vote="icecream"
+            aria-hidden="true"
+          ></div>
+
+          <div
+            class="drop-zone bin bin--pizza"
+            id="bin-pizza"
+            data-vote="pizza"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="drop-zone bin bin--icecream"
+            id="bin-icecream"
+            data-vote="icecream"
+            aria-hidden="true"
+          ></div>
+
+          <img
+            src="assets/bottle.png"
+            alt=""
+            class="bottle"
+            id="bottle"
+            draggable="false"
+            width="114"
+            height="114"
+            aria-label="Drag the bottle to a hole to vote"
+          />
+        </div>
+      </div>
+
+      <p class="hint" id="hint" aria-live="polite">
+        Drag the bottle to a hole to vote
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
